@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background-image: url("https://i.ibb.co/s9VkRVVN/graveyard.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas:
+    'header header header'
+    'sidebar-one main main'
+    'sidebar-two main main'
+    'footer footer footer'
+    ;
+    max-width: 70vw;
+    gap: 1em;
+    margin-top: 10vh;
+    margin-bottom: 2vh;
+}
+
+.caja {
+    background-color: rgb(13, 2, 17);
+    color: white;
+    padding: 2em;
+    border: 1px solid white;
+}
+
+header {
+    grid-area: header;
+    text-align: center;
+}
+
+.stats {
+    grid-area: sidebar-one;
+}
+
+.dni {
+    grid-area: sidebar-two;
+}
+
+.about {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
