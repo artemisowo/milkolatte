@@ -4,81 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
     <title>Batcaver Quest</title>
 </head>
+
 <body>
-    <div class="grid">
-        <!-- Header -->
-        <header class="caja">
-            <h1>Milkolatte's Batcave</h1>
-        </header>
-
-        <!-- Columna izquierda-->
-        <section class="stats caja">
-            <h2>Edtwt stats</h2>
-            <ol>
-                <li><span class="strong">UGW:</span>35kg</li>
-                <li><span class="strong">UGBMI:</span>14</li>
-                <li><span class="strong">LW:</span>37.4kg</li>
-                <li><span class="strong">CBMI:</span>16s</li>
-            </ol>
-            <p class="letra-chica">* Based on modern BMI calculator</p>
-        </section>
-
-        <section class="dni caja">
-            <h2>Do Not Interact/Follow If...</h2>
-            <ol>
-                <li>Generally problematic (e.g homophobic, racist, pedophile, fatphobic, proana, etc)</li>
-                <li>Under 16</li>
-                <li>Complains about disordered behaviours</li>
-                <li>Argues over common sense/unnecessary stuff</li>
-                <li>Is mean for no reason</li>
-            </ol>
-        </section>
-
-        <!-- Columna Derecha-->
-        <section class="about caja">
-            <h2>About Milkolatte</h2>
-
-            <p class="frase">Weary soul seeking freedom in the macabre</p>
-
-            <ol>
-                <li><span class="strong">Age:</span>18</li>
-                <li><span class="strong">Date of Birth:</span>Friday 12th, October 07'</li>
-                <li><span class="strong">Alias:</span>Sushi, Artemis, Val</li>
-                <li><span class="strong">Pronouns:</span>She/They/It</li>
-                <li><span class="strong">Height:</span>1.59m</li>
-            </ol>
-
-            <div class="likes">
-                <h3>Likes</h3>
-                <ul>
-                    <li><span class="strong">Vampires</span></li>
-                    <li><span class="strong">Gothic fashion</span></li>
-                    <li><span class="strong">Books</span> (gothic literature, psychological horror,
-                        suspense, vampires, self improvement)</li>
-                    <p class="favs">Fav Authors: Arthur Conan Doyle, Stephen King, Edgar Alan Poe, Oscar Wilde</p>
-                    <li><span class="strong">Writing</span></li>
-                    <li><span class="strong">Art</span></li>
-                    <li><span class="strong">Music</span> (Gothic rock, Death Rock, Darkwave, Post-punk)</li>
-                    <p class="favs">Absolute Favs: London After Midnight, Siouxsie and The Banshees, Depeche Mode, Rosetta Stone</p>
-                    <li><span class="strong">Human psychology</span></li>
-                    <li><span class="strong">Learning constantly</span></li>
-                    <li><span class="strong">Cats</span> (I own 8)</li>
-                    <li><span class="strong">Hot Tea, Milk Coffee</span></li>
-                    <li><span class="strong">Rainy days</span></li>
-                    <li><span class="strong">Quiet moments with myself</span></li>
-                </ul>
-            </div>
-            
-        </section>
-
-        <!-- Footer -->
-        <footer class="beliefs caja">
-            <h2>I Believe in...</h2>
-        </footer>
+    <div class="portal">
+        <div class="portal-title">
+            <img src="https://files.catbox.moe/8rsivt.gif" alt="Enter the cave...?">
+        </div>
+        <div class="options">
+            <a href="home.html" class="yes">
+                <figure>
+                    <img src="https://files.catbox.moe/oyv72b.gif" alt="">
+                    <figcaption>Enter the Batcave</figcaption>
+                </figure>
+            </a>
+            <a href="#" class="no" onclick="back()">
+                <figure>
+                    <img src="https://files.catbox.moe/rrtkt5.gif" alt="">
+                    <figcaption>Run Away</figcaption>
+                </figure>
+            </a>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        function back() {
+            window.history.back();
+        };
+    </script>
 </body>
-</html>
