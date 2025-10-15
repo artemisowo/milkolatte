@@ -18,12 +18,7 @@ body {
 
 .grid {
     display: grid;
-    grid-template-areas:
-    'header header header'
-    'sidebar-one main main'
-    'sidebar-two main main'
-    'footer footer footer'
-    ;
+    grid-template-columns: repeat(3, 1fr);
     max-width: 70vw;
     gap: 1em;
     background-image: url('https://files.catbox.moe/2kdmaj.jpg');
@@ -71,6 +66,8 @@ body {
     
 }
 
+/* pal grid */
+
 .caja {
     color: white;
     padding: 2em;
@@ -86,22 +83,35 @@ body {
 }
 
 header {
-    grid-area: header;
+    grid-column: 1 / -1;
     text-align: center;
     nav {
         background-image: url("https://files.catbox.moe/nl3dug.jpg");
         background-size: cover;
-
         padding: 2em;
         border: 5px solid rgba(90, 90, 90, 0.247);
     }
     a {
+        display: inline-block;
+        padding: 1em;
         color: white;
         text-decoration: none;
         margin: 0 15px;
         font-size: 1.2em;
+        &:after {
+            transition: ease all 0.3s;
+            content: '';
+            width: 0;
+            left: 0;
+            bottom: 0;
+            background-color: white;
+            height: 2px;
+            display: block;
+        }
         &:hover {
-            text-decoration: underline;
+            &:after {
+                width: 100%;
+            }
         }
     }
     h1 {
@@ -121,13 +131,20 @@ header {
     width: 100px;
 }
 
+.left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1em;
+}
+
 .status {
-    grid-area: sidebar-one;
+    grid-column: 1;
     background-image: url("https://files.catbox.moe/wo4puf.jpg");
     background-size: cover;
     border: 5px solid rgba(170, 170, 170, 0.247);
-    width: 350px;
-    height: 300px;
+    width: 21.875em;
+    height: 18.75em;
 }
 
 .status-title {
@@ -137,9 +154,9 @@ header {
 }
 
 .log {
-    grid-area: sidebar-two;
-    width: 350px;
-    height: 300px;
+    grid-column: 1;
+    width: 21.875em;
+    height: 18.75em;
     background-image: url("https://files.catbox.moe/yklcuc.jpg");
     background-size: cover;
     border: 5px solid rgba(170, 170, 170, 0.247);
@@ -175,11 +192,33 @@ th, td {
 }
 
 .about {
-    grid-area: main;
+    grid-column: 2 / -1;
+    grid-row: 2;
+}
+
+.comments {
+    grid-column: 1;
+    width: 21.875em;
+    height: 18.75em;
+    background-image: url("https://files.catbox.moe/1lnzbz.jpg");
+    background-size: cover;
+    color: white;
+    padding: 2em;
+    border: 5px solid rgba(170, 170, 170, 0.247);
+    border-radius: 5px;
+    iframe {
+        width: 100%;
+        max-height: 80%;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
 }
 
 footer {
-    grid-area: footer;
+    grid-column: 1 / -1;
+    grid-row: 4;
 }
 
 .portal {
@@ -230,3 +269,4 @@ footer {
     border-bottom: 2px dotted rgb(122, 122, 122);
     
 }
+
