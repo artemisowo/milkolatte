@@ -171,6 +171,8 @@ header {
     background-image: url("https://files.catbox.moe/yklcuc.jpg");
     background-size: cover;
     border: 5px solid rgba(170, 170, 170, 0.247);
+    overflow-y: scroll;
+    scrollbar-color: rgba(90, 54, 90, 0.658) transparent;
 }
 
 .update {
