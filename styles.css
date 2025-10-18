@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,6 +18,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+    
 }
 
 .grid {
@@ -145,6 +150,12 @@ header {
     border: 5px solid rgba(170, 170, 170, 0.247);
     width: 21.875em;
     height: 18.75em;
+    overflow-y: scroll;
+    scrollbar-color: rgba(100, 46, 100, 0.658) transparent;
+
+    table {
+        margin: 2em auto;
+    }
 }
 
 .status-title {
@@ -168,6 +179,7 @@ header {
     border: 1px solid rgba(255, 255, 255, 0.445);
     background-color: rgba(0, 0, 0, 0.459);
     padding: 0.4em;
+
 }
 table {
     width: 100%;
@@ -217,6 +229,7 @@ th, td {
     flex-direction: row;
     align-items: center;
     background-image: url('https://files.catbox.moe/rvaztx.jpg');
+    border-bottom: 5px solid rgba(68, 61, 67, 0.301);
     background-size: cover;
     background-position: center;
     width: 100%;
@@ -229,6 +242,8 @@ th, td {
         text-align: center;
         font-style: italic;
         padding: 1em 1em 0 0;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.705);
     }
 }
 
@@ -265,6 +280,7 @@ th, td {
 .text-block {
     height: clamp(12em, 30vh, 25em);
     overflow-y: scroll;
+    scrollbar-color: rgb(136, 133, 133) transparent;
     padding: 1em;
     width: 80%;
 }
