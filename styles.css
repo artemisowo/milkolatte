@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    
+    font-size: 12px;
     background-image: url("https://files.catbox.moe/pp381d.gif");
     background-size: cover;
     background-repeat: no-repeat;
@@ -20,9 +20,9 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 70vw;
-    gap: 1em;
+    gap: 1.2em;
     background-image: url('https://files.catbox.moe/2kdmaj.jpg');
-    padding: 1em;
+    padding: 1.2em;
     margin: -5px;
     border: 5px solid rgba(43, 43, 43, 0.247);
     box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
@@ -201,16 +201,72 @@ th, td {
     grid-column: 2 / -1;
     grid-row: 2;
     display: flex;
-    background-color: rgb(73, 7, 48);
+    flex-direction: column;
+    height: fit-content;
+    border: 5px solid rgba(170, 170, 170, 0.247);
+    padding: 0%;
 }
 
 .face {
-    width: 200px;
+    width: 16.6em;
     align-self: baseline;
 }
 
+.about-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-image: url('https://files.catbox.moe/rvaztx.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    position: relative;
+    img {
+        padding: 1em 0.5em 2em 2em;
+    }
+    p {
+        font-size: clamp(1.5em, 2.4vw, 2.4em);
+        text-align: center;
+        font-style: italic;
+        padding: 1em 1em 0 0;
+    }
+}
+
+.header-blinkies {
+    position: absolute;
+    top: -1.2rem;  
+    right: -1.2rem;    
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+}
+    
+
+.vampire-lover {
+    width: 20em;
+    padding: 0.2em !important;
+}
+
+.text-divider {
+    position: absolute;
+    width: 80%;
+    top: -1.5rem;
+}
+
 .about-text {
-    float: left;
+    background-image: url('https://files.catbox.moe/yr94r1.jpeg');
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 3em;
+}
+
+.text-block {
+    height: clamp(12em, 30vh, 25em);
+    overflow-y: scroll;
+    padding: 1em;
+    width: 80%;
 }
 
 .comments {
