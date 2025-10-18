@@ -200,6 +200,17 @@ th, td {
 .about {
     grid-column: 2 / -1;
     grid-row: 2;
+    display: flex;
+    background-color: rgb(73, 7, 48);
+}
+
+.face {
+    width: 200px;
+    align-self: baseline;
+}
+
+.about-text {
+    float: left;
 }
 
 .comments {
