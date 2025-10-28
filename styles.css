@@ -221,9 +221,25 @@ th, td {
     padding: 0%;
 }
 
+.negrita {
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(202, 198, 204, 0.884);
+}
+
+.red {
+    color: rgb(211, 27, 27);
+}
+
 .face {
     width: 16.6em;
     align-self: baseline;
+}
+
+.italic {
+    font-style: italic;
+    font-size: larger;
+    font-weight: 800;
 }
 
 .about-header {
