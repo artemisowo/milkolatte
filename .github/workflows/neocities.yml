@@ -1,0 +1,26 @@
+    name: Deploy to Neocities
+
+    on:
+      push:
+        branches:
+          - main # Or your main branch name, e.g., master
+
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v4 # Checkout your repository code
+
+          # Optional: Add build steps if your site requires them (e.g., static site generators)
+          # - uses: actions/setup-node@v4
+          #   with:
+          #     node-version: '18'
+          # - run: npm install
+          # - run: npm run build
+
+          - name: Deploy to Neocities
+            uses: bcomnes/deploy-to-neocities@v1 # Or another Neocities deployment action
+            with:
+              api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+              dist_dir: 'public' # The directory containing your website files to upload
+              cleanup: true # Optional: Set to true to delete files on Neocities not found in dist_dir
