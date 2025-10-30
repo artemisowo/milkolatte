@@ -24,4 +24,4 @@
               api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
               dist_dir: 'public' # The directory containing your website files to upload
               preview_before_deploy: true # print a deployment plan prior to waiting for files to upload.
-              cleanup: false # Optional: Set to true to delete files on Neocities not found in dist_dir
+              cleanup: true # Optional: Set to true to delete files on Neocities not found in dist_dir
