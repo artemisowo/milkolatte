@@ -19,8 +19,9 @@
           # - run: npm run build
 
           - name: Deploy to Neocities
-            uses: bcomnes/deploy-to-neocities@v1 # Or another Neocities deployment action
+            uses: bcomnes/deploy-to-neocities@v3 # Or another Neocities deployment action
             with:
               api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
-              dist_dir: '.' # The directory containing your website files to upload
+              dist_dir: 'public' # The directory containing your website files to upload
+              preview_before_deploy: true # print a deployment plan prior to waiting for files to upload.
               cleanup: false # Optional: Set to true to delete files on Neocities not found in dist_dir
