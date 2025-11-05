@@ -105,6 +105,9 @@
                 <section class="log caja">
                     <h2>Updates</h2>
                     <div class="updates">
+                        <p class="update">added music and controls :3<br><span class="update-data">November 5th, '25</span>
+                        </p>
+
                         <p class="update">deployed from github yayz<br><span class="update-data">October 29th, '25</span>
                         </p>
 
@@ -131,36 +134,69 @@
             </div>
 
             <!-- Columna Derecha-->
-            <section class="about caja">
-                <div class="about-header">
-                    <img src="https://files.catbox.moe/lr7taf.gif" alt="Artemis" class="face">
-                    <p class="frase">Weary soul seeking freedom in the macabre</p>
-                    <div class="header-blinkies">
-                        <img src="https://files.catbox.moe/gazcaq.gif" alt="" class="vampire-lover">
-                        <img src="https://files.catbox.moe/o4yexx.gif" alt="" class="vampire-lover">
-                        <img src="https://tinyurl.com/blinkievamp" alt="" class="vampire-lover">
+            <div class="right">
+                <section class="about caja">
+                    <div class="about-header">
+                        <img src="https://files.catbox.moe/lr7taf.gif" alt="Artemis" class="face">
+                        <p class="frase">Weary soul seeking freedom in the macabre</p>
+                        <div class="header-blinkies">
+                            <img src="https://files.catbox.moe/gazcaq.gif" alt="" class="vampire-lover">
+                            <img src="https://files.catbox.moe/o4yexx.gif" alt="" class="vampire-lover">
+                            <img src="https://tinyurl.com/blinkievamp" alt="" class="vampire-lover">
+                        </div>
+                        
                     </div>
                     
-                </div>
-                
-                <div class="about-text">
-                    <img src="https://files.catbox.moe/j414ga.png" alt="" class="text-divider">
-                    <div class="text-block">
-                        <p> <span class="red">Welcome to my little cave.</span> Thanks for coming by. Have a seat, get yourself some tea or coffee, and let's 
-                            enjoy a tranquil night by ourselves while i tell you my story.</p>
-                        <p>I am <span class="red">Artemis</span>. Born a <span class="negrita">Friday, in October, the 12th</span>, my years of age too much to tell, yet I'm constantly told I am a <span class="negrita">'frozen in time 18 year old'</span> </p>
-                        <p>You may have noticed my love for the obscure. Humans are known to be talented at portraying their art in the most unearthly and ominous ways. It <span class="red">attracts</span> me.</p>
-                        <p>Nights like these, in the manor are spent with the glorious scent released from the dirt under the rain, mixed with the fragance of freshly served coffee beans under the warm one of milk, habitually <span class="negrita">London After Midnight or Rosetta Stone</span>, 
-                            perhaps <span class="negrita">Siouxsie And The Banshees</span> if not <span class="negrita">Depeche Mode</span>, sending their tunes, with their chords and lyrics like waves through the athmosphere, 
-                            a book by my hands, writings about my own people who've <span class="red">perished</span> behind me by the hands of <span class="red">humanity</span>, stories labeled as... <span class="italic">'fiction'.</span> Yet through my years of living, i've known these stories to heart.</p>
-                        <p>That's why I stay by myself in this hidden place. All I have by me is Coffee, Books, Music, My seven cats... And the less frequent visitors, like you are. Which I'm not bothered by. I enjoy studying you people, and you need a lot of dedication to find this place.
-                            It pulls my heart's strings, having a visitor every few years. Sometimes it's decades, sometimes centuries. And yet... <span class="negrita">I've never had someone as pleasant to be around like you come by</span>. Oh... You...? <span class="red italic">I like you.</span>
-                        </p>
+                    <div class="about-text">
+                        <img src="https://files.catbox.moe/j414ga.png" alt="" class="text-divider">
+                        <div class="text-block">
+                            <p> <span class="red">Welcome to my little cave.</span> Thanks for coming by. Have a seat, get yourself some tea or coffee, and let's 
+                                enjoy a tranquil night by ourselves while i tell you my story.</p>
+                            <p>I am <span class="red">Artemis</span>. Born a <span class="negrita">Friday, in October, the 12th</span>, my years of age too much to tell, yet I'm constantly told I am a <span class="negrita">'frozen in time 18 year old'</span> </p>
+                            <p>You may have noticed my love for the obscure. Humans are known to be talented at portraying their art in the most unearthly and ominous ways. It <span class="red">attracts</span> me.</p>
+                            <p>Nights like these, in the manor are spent with the glorious scent released from the dirt under the rain, mixed with the fragance of freshly served coffee beans under the warm one of milk, habitually <span class="negrita">London After Midnight or Rosetta Stone</span>, 
+                                perhaps <span class="negrita">Siouxsie And The Banshees</span> if not <span class="negrita">Depeche Mode</span>, sending their tunes, with their chords and lyrics like waves through the athmosphere, 
+                                a book by my hands, writings about my own people who've <span class="red">perished</span> behind me by the hands of <span class="red">humanity</span>, stories labeled as... <span class="italic">'fiction'.</span> Yet through my years of living, i've known these stories to heart.</p>
+                            <p>That's why I stay by myself in this hidden place. All I have by me is Coffee, Books, Music, My seven cats... And the less frequent visitors, like you are. Which I'm not bothered by. I enjoy studying you people, and you need a lot of dedication to find this place.
+                                It pulls my heart's strings, having a visitor every few years. Sometimes it's decades, sometimes centuries. And yet... <span class="negrita">I've never had someone as pleasant to be around like you come by</span>. Oh... You...? <span class="red italic">I like you.</span>
+                            </p>
+                        </div>
                     </div>
-                </div>
-                
-            </section>
+                </section>
 
+                <section class="audio-player caja">
+                    <audio loop class="bg-song">
+                        <source src="./music/sacrifice.mp3" type="audio/mpeg">
+                    </audio>
+                    <div class="column-left">
+                        <div class="playing-song">
+                            <p>Now playing: <span id="song-name" class="song-name">Sacrifice - London After Midnight</span></p>
+                            <input type="range" id="progressBar" min="0" max="1" step="0.1" value="0.1">
+                        </div>
+                        <div class="volume" id="audio-controls">
+                            <label for="volumeControl">Volume</label>
+                            <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="0.2">
+                        </div>
+                        <div class="control-buttons">
+                            <button class="audio-button" id="play-audio"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill" viewBox="0 0 16 16">
+                                <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                                </svg>
+                            </button>
+                            <button class="audio-button" id="pause-audio">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pause-fill" viewBox="0 0 16 16">
+                                    <path d="M5.5 3.5A1.5 1.5 0 0 1 7 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5m5 0A1.5 1.5 0 0 1 12 5v6a1.5 1.5 0 0 1-3 0V5a1.5 1.5 0 0 1 1.5-1.5"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="cover">
+                        <a href="https://www.youtube.com/watch?v=sWcyxztky0g&list=RDEM7ieRqnS0MvMUf9rwkd5uaw&index=1" id="album-cover" target="_blank">
+                            <img src="https://files.catbox.moe/zyne5y.jpg" alt="album cover" class="album-cover">
+                        </a>
+                    </div>
+                </section>
+            </div>
+            
             
 
             <!-- Footer -->
