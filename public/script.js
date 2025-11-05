@@ -14,7 +14,7 @@ const volumeSelector = document.getElementById('volumeControl')
 
 // autoplays music whenever content loads
 window.onload = () => {
-    music.src = 'music/sacrifice.mp3'
+    music.src = 'https://voca.ro/1XQU6LCT1EdR'
     music.volume = 0.2
     music.play()
 }
