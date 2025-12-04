@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    background-image: url('https://files.catbox.moe/svdwrk.jpg');
+    background-attachment: fixed;
+    font-family: 'Roboto Mono';
+}
+
+.rect {
+    background-color: rgba(36, 35, 35, 0.719);
+    padding: 20px;
+    width: 60vw;
+    margin: 50px;
+    border: 5px solid rgba(59, 58, 59, 0.301);
+    border-radius: 5px;
+}
+
+header {
+    background-image: url('https://files.catbox.moe/hf7urm.jpg');
+    height: 20vh;
+    padding: 20px;
+}
+
+.title {
+    color: rgb(240, 199, 192);
+    text-align: center;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.cuerpo {
+    margin: 20px 0;
+    color: rgb(228, 213, 225);
+    font-size: 0.9em;
+}
+
+.back {
+    display: inline-block;
+    padding: 1em;
+    color: aliceblue;
+    background-color: rgba(36, 35, 35, 0.719);
+    border: 5px solid rgba(59, 58, 59, 0.301);
+    cursor: pointer;
+}
